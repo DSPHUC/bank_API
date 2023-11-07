@@ -344,7 +344,7 @@
 
     async function fetchALlPerson() {
       return await $.ajax({
-        url: "http://localhost:3301/persons",
+        url: "http://localhost:3300/persons",
         method: "GET",
         dataType: "json"
       })
@@ -377,7 +377,7 @@
       //     return;
       //   }
 
-      //   const response = await fetch(`http://localhost:3301/persons/${personId}`, {
+      //   const response = await fetch(`http://localhost:3300/persons/${personId}`, {
       //     method: 'PATCH',
       //     headers: {
       //       "Content-type": "application/json; charset=UTF-8"
@@ -497,13 +497,13 @@
     }
 
     const getPersonById = async (personId) => {
-      const response = await fetch("http://localhost:3301/persons/" + personId);
+      const response = await fetch("http://localhost:3300/persons/" + personId);
       const person = await response.json();
       return person;
     }
 
     const fetchUpdatePerson = async (personId, obj) => {
-      const response = await fetch("http://localhost:3301/persons/" + personId, {
+      const response = await fetch("http://localhost:3300/persons/" + personId, {
         method: 'PATCH',
         headers: {
           "Content-type": "application/json; charset=UTF-8"
@@ -515,7 +515,7 @@
     }
 
     const fetchDepositPerson = async (personId, obj) => {
-      const response = await fetch("http://localhost:3301/persons/" + personId, {
+      const response = await fetch("http://localhost:3300/persons/" + personId, {
         method: 'PATCH',
         headers: {
           "Content-type": "application/json; charset=UTF-8"
@@ -527,7 +527,7 @@
     }
 
     const fetchWithdrawPerson = async (personId, obj) => {
-      const response = await fetch("http://localhost:3301/persons/" + personId, {
+      const response = await fetch("http://localhost:3300/persons/" + personId, {
         method: 'PATCH',
         headers: {
           "Content-type": "application/json; charset=UTF-8"
@@ -539,7 +539,7 @@
     }
 
     const fetchTransferPerson = async (personId, obj) => {
-      const response = await fetch("http://localhost:3301/persons/" + personId, {
+      const response = await fetch("http://localhost:3300/persons/" + personId, {
         method: 'PATCH',
         headers: {
           "Content-type": "application/json; charset=UTF-8"
@@ -662,7 +662,7 @@
               "Content-type": "application/json; charset=UTF-8"
             },
             method: 'POST',
-            url: "http://localhost:3301/persons",
+            url: "http://localhost:3300/persons",
             data: JSON.stringify(obj)
           }
         )
@@ -743,7 +743,7 @@
               "Content-type": "application/json; charset=UTF-8"
             },
             method: 'POST',
-            url: "http://localhost:3301/persons",
+            url: "http://localhost:3300/persons",
             data: JSON.stringify(obj)
           }
         )
