@@ -753,7 +753,7 @@
 
             closeModal('modalUpdate')
 
-            toastBody.text('Sửa thành công')
+            toastBody.text('Thay đổi thành công')
             toastBootstrap.show()
 
             setTimeout(() => {
@@ -769,34 +769,9 @@
     btnCreate.on('click', async () => {
       $('#frmCreate').trigger('submit')
     })
-      ('click', async () => {
-        const fullName = $('#fullNameUp').val();
-        const email = $('#emailUp').val();
-        const phone = $('#phoneUp').val();
-        const address = $('#addressUp').val();
-
-        const obj = {
-          fullName,
-          email,
-          phone,
-          address
-        };
-
-        const content = await fetchUpdatePerson(personId, obj);
-
-        const updateRow = document.getElementById('tr_' + personId);
-        const str = renderPerson(content);
-        updateRow.innerHTML = str;
-
-        closeModal('modalUpdate');
-
-        toastBody.text('Cập nhật thông tin thành công');
-        toastBootstrap.show();
-
-        setTimeout(() => {
-          btnCloseToast.click()
-        }, 2500);
-      })
+    btnUpdate.on('click', async () => {
+      $('#frmUpdate').trigger('submit')
+    })
 
     btnDeposit.on('click', async () => {
 
