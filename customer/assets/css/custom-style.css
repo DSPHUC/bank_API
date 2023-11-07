@@ -1,7 +1,7 @@
 .bg-body-tertiary {
     background-color: #299be4 !important;
 }
-
+/*  */
 .navbar-brand {
     font-size: 36px;
     color: #fff;
@@ -42,16 +42,32 @@ footer.error {
 .notification p.error {
     color: #b05965;
 }
+
 button:hover {
     cursor: pointer;
 }
+
 select:hover {
     cursor: pointer;
 }
+
 .form-label {
     font-weight: bold !important;
 }
+
 .error-style {
     margin: 10px;
     color: #FA0D0D;
+}
+
+label.error {
+    color: #cf0000;
+}
+
+input.error {
+    border: solid 1px #cf0000;
+}
+
+.hide {
+    display: none;
 }
